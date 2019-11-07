@@ -15,12 +15,21 @@
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//iPhoneX / iPhoneXS
+#define  isIphoneX_XS     (kScreenWidth == 375.f && kScreenHeight == 812.f ? YES : NO)
+//iPhoneXR / iPhoneXSMax
+#define  isIphoneXR_XSMax    (kScreenWidth == 414.f && kScreenHeight == 896.f ? YES : NO)
+//是否全面屏
+#define   isFullScreen    (isIphoneX_XS || isIphoneXR_XSMax)
+#define  StatusBarHeight     (isFullScreen ? 44.f : 20.f)
+
 #define KCellHeight 150                       //cell高度
 #define kSectionCount 10                    //cell高度
 #define kHeadViewHeight 100                     //headerView的高度
 #define kSectionFootViewHeight 5                     //分区FootView的高度
 #define kStartY (kScreenHeight - KCellHeight - kSectionFootViewHeight)  //默认列表内容开始的offSet.y值
-#define kEndY (20)   //列表上滑后吸附在顶端的offSet.y值
+#define kEndY (StatusBarHeight)   //列表上滑后吸附在顶端的offSet.y值
 #define kCriticalY (kScreenHeight*0.5) //决定是上滑还是下滑的临界点y值
 #define kContentInsetTopValue (kStartY)
 
@@ -49,6 +58,8 @@ static NSString *cellID = @"cellID";
         self.automaticallyAdjustsScrollViewInsets = NO;
         
     }
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
 
     self.myScrollView.contentSize = CGSizeMake(2 * kScreenWidth, kScreenHeight);
     self.myScrollView.backgroundColor = UIColor.clearColor;
@@ -59,7 +70,9 @@ static NSString *cellID = @"cellID";
     [self.view addSubview:self.headView];
 
 }
-
+-(void)viewDidLayoutSubviews{
+    NSLog(@"%@",self.myScrollView);
+}
 #pragma  mark -- btnClick
 - (void)btnClick:(UIButton *)btn{
     
@@ -226,7 +239,6 @@ static NSString *cellID = @"cellID";
     
     ZHTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     cell.titleLabel.text = [NSString stringWithFormat:@"%ld",indexPath.section];
-    cell.backgroundColor = [UIColor whiteColor];
     return cell;
 }
 #pragma  mark -- UITableViewDelegate
@@ -258,7 +270,7 @@ static NSString *cellID = @"cellID";
 - (UITableView *)tableView{
     
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 0, kScreenWidth - 20, self.myScrollView.height) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 0, kScreenWidth - 20, kScreenHeight) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.backgroundColor = [UIColor clearColor];
