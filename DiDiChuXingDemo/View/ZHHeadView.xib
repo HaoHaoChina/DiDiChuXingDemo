@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="lFT-nl-SDe" customClass="ZHHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DiDi出行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUi-2n-7gA">
+                    <rect key="frame" x="0.0" y="20" width="375" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ofd-ip-1I9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYw-Xy-CLw">
+                    <rect key="frame" x="0.0" y="70" width="187.5" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1IV-DB-bIy"/>
+                    </constraints>
+                    <state key="normal" title="快车">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4Z-hd-CtV">
+                    <rect key="frame" x="187.5" y="70" width="187.5" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="6zS-DG-PN2"/>
+                    </constraints>
+                    <state key="normal" title="出租车">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrS-qG-RrR">
+                    <rect key="frame" x="71" y="97" width="46" height="3"/>
+                    <color key="backgroundColor" red="0.33652816019999998" green="1" blue="0.1880930948" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="AzG-ud-DCe"/>
+                        <constraint firstAttribute="width" constant="46" id="HmG-us-vK8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="BrS-qG-RrR" firstAttribute="centerX" secondItem="cYw-Xy-CLw" secondAttribute="centerX" id="0gV-vn-F6N"/>
+                <constraint firstItem="F4Z-hd-CtV" firstAttribute="bottom" secondItem="Yqy-K6-P6x" secondAttribute="bottom" id="8Kv-Aa-nRI"/>
+                <constraint firstItem="Yqy-K6-P6x" firstAttribute="trailing" secondItem="vUi-2n-7gA" secondAttribute="trailing" id="8WE-qx-Zzg"/>
+                <constraint firstItem="cYw-Xy-CLw" firstAttribute="leading" secondItem="Yqy-K6-P6x" secondAttribute="leading" id="EMt-u0-8TY"/>
+                <constraint firstItem="BrS-qG-RrR" firstAttribute="bottom" secondItem="Yqy-K6-P6x" secondAttribute="bottom" id="EqN-0I-spu"/>
+                <constraint firstItem="cYw-Xy-CLw" firstAttribute="bottom" secondItem="Yqy-K6-P6x" secondAttribute="bottom" id="GHc-Gz-fnw"/>
+                <constraint firstItem="vUi-2n-7gA" firstAttribute="leading" secondItem="Yqy-K6-P6x" secondAttribute="leading" id="Ygm-pq-NBS"/>
+                <constraint firstItem="F4Z-hd-CtV" firstAttribute="width" secondItem="cYw-Xy-CLw" secondAttribute="width" id="ZFI-8F-tAx"/>
+                <constraint firstItem="vUi-2n-7gA" firstAttribute="top" secondItem="Yqy-K6-P6x" secondAttribute="top" constant="20" id="ZfG-gr-7Ib"/>
+                <constraint firstItem="Yqy-K6-P6x" firstAttribute="trailing" secondItem="F4Z-hd-CtV" secondAttribute="trailing" id="aKK-Bn-gTu"/>
+                <constraint firstItem="F4Z-hd-CtV" firstAttribute="leading" secondItem="cYw-Xy-CLw" secondAttribute="trailing" id="f2A-Ph-htJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Yqy-K6-P6x"/>
+            <connections>
+                <outlet property="bottomLine" destination="BrS-qG-RrR" id="0Ix-rU-XL7"/>
+                <outlet property="fastCarBtn" destination="cYw-Xy-CLw" id="GsY-sx-Xdf"/>
+                <outlet property="taxiCarBtn" destination="F4Z-hd-CtV" id="NSl-fd-PGW"/>
+            </connections>
+            <point key="canvasLocation" x="128.80000000000001" y="-290.55472263868069"/>
+        </view>
+    </objects>
+</document>
