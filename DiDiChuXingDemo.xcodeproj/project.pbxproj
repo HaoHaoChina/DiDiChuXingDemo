@@ -21,6 +21,7 @@
 		186A77332372C0920009B933 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 186A77322372C0920009B933 /* UIView+Category.m */; };
 		186A77372372E29E0009B933 /* ZHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186A77352372E29E0009B933 /* ZHTableViewCell.m */; };
 		186A77382372E29E0009B933 /* ZHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186A77362372E29E0009B933 /* ZHTableViewCell.xib */; };
+		1880870A23751FAE00B2E5BD /* 1573183232165.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1880870923751FAE00B2E5BD /* 1573183232165.gif */; };
 		18C6B8EC237408DE0095BCA7 /* 11252436.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C6B8EB237408DE0095BCA7 /* 11252436.png */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		186A77342372E29E0009B933 /* ZHTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHTableViewCell.h; sourceTree = "<group>"; };
 		186A77352372E29E0009B933 /* ZHTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHTableViewCell.m; sourceTree = "<group>"; };
 		186A77362372E29E0009B933 /* ZHTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHTableViewCell.xib; sourceTree = "<group>"; };
+		1880870923751FAE00B2E5BD /* 1573183232165.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1573183232165.gif; sourceTree = "<group>"; };
 		18C6B8EB237408DE0095BCA7 /* 11252436.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11252436.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 				18C6B8EA237405C70095BCA7 /* View */,
 				18C6B8E82374057E0095BCA7 /* LaunchImages */,
 				186A76F92372AE510009B933 /* Assets.xcassets */,
+				1880870923751FAE00B2E5BD /* 1573183232165.gif */,
 				186A76FB2372AE510009B933 /* LaunchScreen.storyboard */,
 				186A76FE2372AE510009B933 /* Info.plist */,
 				186A76FF2372AE510009B933 /* main.m */,
@@ -283,6 +286,7 @@
 			files = (
 				186A76FD2372AE510009B933 /* LaunchScreen.storyboard in Resources */,
 				18C6B8EC237408DE0095BCA7 /* 11252436.png in Resources */,
+				1880870A23751FAE00B2E5BD /* 1573183232165.gif in Resources */,
 				186A76FA2372AE510009B933 /* Assets.xcassets in Resources */,
 				186A772D2372B6000009B933 /* ZHHeadView.xib in Resources */,
 				186A77382372E29E0009B933 /* ZHTableViewCell.xib in Resources */,
